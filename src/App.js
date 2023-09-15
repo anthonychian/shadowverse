@@ -1,22 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Leader from './components/Leader'
+import Scoreboard from './components/Scoreboard'
+import Voicelines from './components/Voicelines'
+// import wallpaperDragon from '../src/assets/leaders/Mizuchi/Wallpaper.jpg'
+// import wallpaperDragon2 from '../src/assets/leaders/Mizuchi/36321.png'
+// import wallpaperDragon3 from '../src/assets/leaders/Mizuchi/36326.png'
+// import wallpaperDragon4 from '../src/assets/leaders/Mizuchi/990846.jpg'
+
 
 function App() {
+  let name = "Mizuchi"
   return (
-    <div className="App">
+    <div style={{background: 'url(' + require('../src/assets/leaders/Mizuchi/36326.png') + ') no-repeat center center fixed',
+    webkitBackgroundSize: "cover",
+    mozBackgroundSize: "cover",
+    oBackgroundSize: "cover",
+    backgroundSize: "cover" }}>
+     {/* <div style={{backgroundImage: 'url(' + require('../src/assets/leaders/Mizuchi/Wallpaper.jpg') + ') '}}>  */}
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Leader name={name} />
+        <Voicelines name={name} />
+        <Scoreboard />
       </header>
     </div>
   );
