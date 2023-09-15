@@ -1,7 +1,8 @@
 import React from 'react'
 import imageCernunnos from '../assets/leaders/Cernunnos/Cernunnos.png'
 import imageMizuchi from '../assets/leaders/Mizuchi/Mizuchi.png'
-// import wallpaperDragon from '../assets/leaders/Mizuchi/Wallpaper.jpg'
+import imageForte from '../assets/leaders/Forte/Forte.png'
+
 import '../css/Leader.css'
 
 export default function Leader({ name }) {
@@ -12,7 +13,9 @@ export default function Leader({ name }) {
       break;
     case 'Mizuchi':
       image = imageMizuchi
-      // wallpaper = wallpaperDragon
+      break;
+    case 'Forte':
+      image = imageForte
       break;
     default:
       image = imageCernunnos

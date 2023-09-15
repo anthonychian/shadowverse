@@ -1,34 +1,56 @@
 .ScoreboardContainer {
-    background-color: purple;
+    /* background-color: cyan; */
     color: white;
     font-size: 100px;
-
-    /* height: 30%; */
-    width: 500px;
+    width: 70%;
+    height: 25%;
+    cursor:'pointer';
     /* display: flex;
     justify-content: space-evenly;
     align-items: center; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    -webkit-text-stroke-width: 3px;
+    font-family: 'Marshland_Beauty';
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 
     position: fixed;
     top: 5%;
-    right: 10%;
+    right: 0%;
 }
 .PlayerScoreboard {
-  background-color: green;
+  
+  background-color: rgba(0, 255, 0, 0.3);
+  outline: 7px ridge rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
   width: 500px;
   display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 .EnemyScoreboard {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
+  outline: 7px ridge rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
   width: 500px;
   display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.EnemyScoreboardContainer {
+  /* background-color: yellow; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.PlayerScoreboardContainer {
+  /* background-color: yellow; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 
@@ -36,7 +58,7 @@
 @media screen and (max-width: 1000px) {
     .ScoreboardContainer {
       font-size: 100px;
-      width: 400px;
+      /* width: 400px; */
     }
     .PlayerScoreboard {
       width: 400px;
@@ -50,7 +72,7 @@
 @media screen and (max-width: 600px) {
   .ScoreboardContainer {
     font-size: 80px;
-    width: 250px;
+    /* width: 250px; */
     }
     .PlayerScoreboard {
       width: 250px;
@@ -63,14 +85,23 @@
 /* extra small styles */
 @media screen and (max-width: 400px) {
   .ScoreboardContainer {
-    width: 50%;
+    font-size: 80px;
+    /* width: 250px; */
+  }
+  .PlayerScoreboard {
+    width: 250px;
+  }
+  .EnemyScoreboard {
+    width: 250px;
   }
 }
 
 .pointsWhite {
   color: white;
+  pointer-events: none;
 }
 
 .pointsRed {
-  color: red
+  color: red;
+  pointer-events: none;
 }
