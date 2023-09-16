@@ -2,6 +2,7 @@
     color: white;
     width: 30%;
     height: 90%;
+    max-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +61,7 @@
 .points {
     font-size: 30px;
     height: 80px;
-    width: 55px;
+    width: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +73,7 @@
     outline: 7px ridge rgba(0, 0, 0, 0.6);
     border-radius: 2rem;
     position: fixed;
-    bottom: 15%;
+    bottom: 20%;
     left: 30%;
     height: '200px';
     width: '200px';
@@ -117,8 +118,8 @@
     border-radius: 2rem;
     display: flex;
     margin-top: 30%;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     font-size: 25px;
     border-radius: 50%;
     display: flex;
@@ -132,13 +133,32 @@
     border-radius: 2rem;
     display: flex;
     margin-top: 30%;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     font-size: 25px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
+.nextTurnContainer {
+    position: fixed;
+    bottom: 2%;
+    left: 30%;
+    background-color: green;
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.buttonText {
+    font-size: '50px';
+    color: white;
+    width: 100%;
+}
 

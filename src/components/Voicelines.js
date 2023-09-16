@@ -28,6 +28,13 @@ import impressedForte from '../assets/leaders/Forte/Impressed.mp3'
 import tauntForte from '../assets/leaders/Forte/Taunt.mp3'
 import startForte from '../assets/leaders/Forte/Start.mp3'
 
+import greetingPompom from '../assets/leaders/Pompom/Greeting.mp3'
+import thanksPompom from '../assets/leaders/Pompom/Thanks.mp3'
+import apologyPompom from '../assets/leaders/Pompom/Apology.mp3'
+import impressedPompom from '../assets/leaders/Pompom/Impressed.mp3'
+import tauntPompom from '../assets/leaders/Pompom/Taunt.mp3'
+import startPompom from '../assets/leaders/Pompom/Start.mp3'
+
 export default function Voicelines({ name }) {
   let greeting, thanks, apology, impressed, taunt, start;
   const buttonBackgroundColor = 'rgba(0, 0, 0, 0.6)'
@@ -57,6 +64,14 @@ export default function Voicelines({ name }) {
         taunt = new Audio(tauntForte)
         start = new Audio(startForte)
         break;
+        case 'Pompom':
+          greeting = new Audio(greetingPompom)
+          thanks = new Audio(thanksPompom)
+          apology = new Audio(apologyPompom)
+          impressed = new Audio(impressedPompom)
+          taunt = new Audio(tauntPompom)
+          start = new Audio(startPompom)
+          break;
     default:
       greeting = new Audio(greetingCernunnos)
       thanks = new Audio(thanksCernunnos)

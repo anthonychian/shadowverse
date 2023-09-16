@@ -2,6 +2,7 @@ import React from 'react'
 import imageCernunnos from '../assets/leaders/Cernunnos/Cernunnos.png'
 import imageMizuchi from '../assets/leaders/Mizuchi/Mizuchi.png'
 import imageForte from '../assets/leaders/Forte/Forte.png'
+import imagePompom from '../assets/leaders/Pompom/Pompom.png'
 
 import '../css/Leader.css'
 
@@ -17,6 +18,9 @@ export default function Leader({ name }) {
     case 'Forte':
       image = imageForte
       break;
+      case 'Pompom':
+        image = imagePompom
+        break;
     default:
       image = imageCernunnos
   }

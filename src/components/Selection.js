@@ -3,9 +3,9 @@ import Home from '../components/Home'
 import imageCernunnos from '../assets/leaders/Cernunnos/Cernunnos.png'
 import imageMizuchi from '../assets/leaders/Mizuchi/Mizuchi.png'
 import imageForte from '../assets/leaders/Forte/Forte.png'
+import imagePompom from '../assets/leaders/Pompom/Pompom.png'
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Card from '@mui/material/Card';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,8 +17,8 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   height: "30%",
-  width: "50%",
-  bgcolor: 'background.paper',
+  width: "30%",
+  bgcolor: 'rgb(0, 0, 0, 0.5)',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -51,7 +51,7 @@ export default function Selection() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-            <Card variant="outlined">
+            <Card variant="outlined" sx={{backgroundColor: 'rgb(0, 0, 0, 0)'}}>
                     <img
                         onClick={(e) => selectLeader(e)}
                         width="100px"
@@ -70,6 +70,12 @@ export default function Selection() {
                         src={imageCernunnos}
                         alt="Cernunnos"
                     />
+                    <img
+                        onClick={(e) => selectLeader(e)}
+                        width="100px"
+                        src={imagePompom}
+                        alt="Pompom"
+                    />
             </Card>
         </Box>
       </Modal>
@@ -77,65 +83,3 @@ export default function Selection() {
     </div>
   );
 }
-
-
-// export default function Selection() {
-//     const [selectedOption, setSelectedOption] = useState("")
-//     const [selected, setSelected] = useState(false)
-
-//     function formSubmit(e) {
-//         e.preventDefault();
-//         console.log(selectedOption)
-//         setSelected(true)
-//     }
-//     function onValueChange(e) {
-//         setSelectedOption(e.target.value)
-//     }
-
-//     return (
-//         <>
-//             {!selected && <form onSubmit={formSubmit}>
-//             <div className="radio">
-//             <label>
-//                 <input
-//                 type="radio"
-//                 value="Forte"
-//                 checked={selectedOption === "Forte"}
-//                 onChange={onValueChange}
-//                 />
-//                 Forte
-//             </label>
-//             </div>
-//             <div className="radio">
-//             <label>
-//                 <input
-//                 type="radio"
-//                 value="Mizuchi"
-//                 checked={selectedOption === "Mizuchi"}
-//                 onChange={onValueChange}
-//                 />
-//                 Mizuchi
-//             </label>
-//             </div>
-//             <div className="radio">
-//             <label>
-//                 <input
-//                 type="radio"
-//                 value="Cernonnus"
-//                 checked={selectedOption === "Cernonnus"}
-//                 onChange={onValueChange}
-//                 />
-//                 Cernonnus
-//             </label>
-//             </div>
-//             <div>
-//             Selected option is : {selectedOption}
-//             </div>
-//             <button onClick={formSubmit} className="btn btn-default" type="submit">
-//                 Submit
-//             </button>
-//         </form>}
-//         {selected && <Home name={selectedOption}/>}
-//       </>
-//     )
-// }

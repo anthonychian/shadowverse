@@ -16,6 +16,8 @@ import concedeMizuchi from '../assets/leaders/Mizuchi/Concede.mp3'
 import victoryForte from '../assets/leaders/Forte/Victory.mp3'
 import concedeForte from '../assets/leaders/Forte/Concede.mp3'
 
+import victoryPompom from '../assets/leaders/Pompom/Victory.mp3'
+import concedePompom from '../assets/leaders/Pompom/Concede.mp3'
 
 export default function Scoreboard({ name }) {
     let scoreCounter = new Audio(scoreAudio)
@@ -37,6 +39,10 @@ export default function Scoreboard({ name }) {
         case 'Forte':
             victory = new Audio(victoryForte)
             concede = new Audio(concedeForte)
+            break;
+        case 'Pompom':
+            victory = new Audio(victoryPompom)
+            concede = new Audio(concedePompom)
             break;
         default:
         victory = new Audio(victoryCernunnos)
@@ -71,12 +77,12 @@ export default function Scoreboard({ name }) {
     useEffect(() => {
         if (win) 
             victory.play()
-    }, [win, victory])
+    }, [win])
 
     useEffect(() => {
         if (lose) 
             concede.play()
-    }, [lose, concede])
+    }, [lose])
 
     return (
         <div className='ScoreboardContainer'>

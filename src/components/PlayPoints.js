@@ -30,6 +30,11 @@ export default function Scoreboard() {
         (maxPlayPoints > 0) ? setMaxPlayPoints(maxPlayPoints - 1) : setMaxPlayPoints(0);
         (maxPlayPoints > 0) ? counter.play() : limit.play()
     }
+    const incrementBoth = () => {
+      (maxPlayPoints < 10) ? setMaxPlayPoints(maxPlayPoints + 1) : setMaxPlayPoints(10);
+      (currentPlayPoints < 10 && maxPlayPoints + 1 < 10 ) ? setCurrentPlayPoints(maxPlayPoints + 1) : setCurrentPlayPoints(10);
+      counter.play()
+    }
 
     const [maxPlayPoints, setMaxPlayPoints] = useState(0)
     const [currentPlayPoints, setCurrentPlayPoints] = useState(0)
@@ -68,19 +73,6 @@ export default function Scoreboard() {
               </IconButton>}
             </div>
             <div className='pointsContainer'>
-              <div className='downArrowContainer'>
-                {maxPlayPoints > 0 ? 
-                  <IconButton sx={{ color:"white", backgroundColor: buttonBackgroundColor }}
-                    onClick={() => decrementCurrent()} >                  
-                      <ExpandMoreIcon sx={{ color: "white", width:"30px", height: "30px" }} />
-                  </IconButton> :
-                  <IconButton disabled>
-                    <RemoveIcon sx={{ color: "white", width:"30px", height: "30px" }} />
-                </IconButton>}
-              </div>
-              <div className='points'>
-                  {currentPlayPoints}/{maxPlayPoints}
-              </div>
               <div className='upArrowContainer'>
                 {currentPlayPoints < 10 && maxPlayPoints > 0 ? 
                 <IconButton sx={{ color:"white", backgroundColor: buttonBackgroundColor }}
@@ -91,7 +83,25 @@ export default function Scoreboard() {
                     <AddIcon sx={{ color: "white", width:"30px", height: "30px" }} className='incButton'/>
                 </IconButton> }
               </div>
+              <div className='points'>
+                  {currentPlayPoints}/{maxPlayPoints}
+              </div>
+              <div className='downArrowContainer'>
+                {maxPlayPoints > 0 ? 
+                  <IconButton sx={{ color:"white", backgroundColor: buttonBackgroundColor }}
+                    onClick={() => decrementCurrent()} >                  
+                      <ExpandMoreIcon sx={{ color: "white", width:"30px", height: "30px" }} />
+                  </IconButton> :
+                  <IconButton disabled>
+                    <RemoveIcon sx={{ color: "white", width:"30px", height: "30px" }} />
+                </IconButton>}
+              </div>
             </div>
+            <div className='nextTurnContainer'>
+                <div className='buttonText' onClick={() => incrementBoth()} >
+                  Next Turn
+                </div>
+              </div>
           </div>
         </div>
     )

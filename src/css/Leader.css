@@ -24,7 +24,7 @@
     .LeaderImage {
       width: 700px;
       position: relative;
-      top: 40vh;
+      top: 30vh;
       /* background-color: green; */
     }
   }
@@ -34,7 +34,7 @@
     .LeaderImage {
       width: 500px;
       position: relative;
-      top: 50vh;
+      top: 40vh;
       /* background-color: red; */
     }
   }
