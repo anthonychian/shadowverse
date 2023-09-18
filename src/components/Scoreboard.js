@@ -73,15 +73,22 @@ export default function Scoreboard({ name }) {
         win = true
     if (playerPoints === 0)
         lose = true
+    
+    useEffect(() => {
+        setPlayerPoints(20)
+        setEnemyPoints(20)
+    }, [name])
 
     useEffect(() => {
         if (win) 
             victory.play()
+         // eslint-disable-next-line
     }, [win])
 
     useEffect(() => {
         if (lose) 
             concede.play()
+         // eslint-disable-next-line
     }, [lose])
 
     return (

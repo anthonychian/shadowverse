@@ -36,7 +36,7 @@ import tauntPompom from '../assets/leaders/Pompom/Taunt.mp3'
 import startPompom from '../assets/leaders/Pompom/Start.mp3'
 
 export default function Voicelines({ name }) {
-  let greeting, thanks, apology, impressed, taunt, start;
+  let greeting, thanks, apology, impressed, taunt, start
   const buttonBackgroundColor = 'rgba(0, 0, 0, 0.6)'
 
   switch (name) {
@@ -83,7 +83,10 @@ export default function Voicelines({ name }) {
   
   useEffect(() => {
     start.play();
-  }, []);
+     // eslint-disable-next-line
+  }, [name]);
+ 
+
 
   function playAudio(audio) {
     audio.play()

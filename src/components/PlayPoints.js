@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
@@ -8,10 +8,20 @@ import '../css/PlayPoints.css'
 
 import limitAudio from '../assets/buttons/limit.wav'
 import playpointsAudio from '../assets/buttons/counter2.mp3'
+import NextTurnCernunnos from '../assets/leaders/Cernunnos/NextTurn.mp3'
+import NextTurnMizuchi from '../assets/leaders/Mizuchi/NextTurn.mp3'
+import NextTurnForte from '../assets/leaders/Forte/NextTurn.mp3'
+import NextTurnPompom from '../assets/leaders/Pompom/NextTurn.mp3'
 
-export default function Scoreboard() {
+
+export default function Scoreboard({ name }) {
     let counter = new Audio(playpointsAudio)
     let limit = new Audio(limitAudio)
+    let NextTurn
+
+    const [maxPlayPoints, setMaxPlayPoints] = useState(0)
+    const [currentPlayPoints, setCurrentPlayPoints] = useState(0)
+
     const buttonBackgroundColor = 'rgba(0, 0, 0, 0.6)'
 
     const incrementCurrent = () => {
@@ -34,10 +44,33 @@ export default function Scoreboard() {
       (maxPlayPoints < 10) ? setMaxPlayPoints(maxPlayPoints + 1) : setMaxPlayPoints(10);
       (currentPlayPoints < 10 && maxPlayPoints + 1 < 10 ) ? setCurrentPlayPoints(maxPlayPoints + 1) : setCurrentPlayPoints(10);
       counter.play()
+      NextTurn.play()
     }
 
-    const [maxPlayPoints, setMaxPlayPoints] = useState(0)
-    const [currentPlayPoints, setCurrentPlayPoints] = useState(0)
+    switch (name) {
+      case 'Cernunnos':
+          NextTurn = new Audio(NextTurnCernunnos)
+          break;
+      case 'Mizuchi':
+          NextTurn = new Audio(NextTurnMizuchi)
+          break;
+      case 'Forte':
+          NextTurn = new Audio(NextTurnForte)
+          break;
+      case 'Pompom':
+          NextTurn = new Audio(NextTurnPompom)
+          break;
+      default:
+          NextTurn = new Audio(NextTurnCernunnos)
+  }
+
+  useEffect(() => {
+    setCurrentPlayPoints(0)
+    setMaxPlayPoints(0)
+  }, [name])
+
+
+
 
     return (
         <div className='PlayPointsContainer'>

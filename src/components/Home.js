@@ -3,10 +3,15 @@ import Leader from './Leader'
 import Scoreboard from './Scoreboard'
 import Voicelines from './Voicelines'
 import PlayPoints from './PlayPoints'
+// import startCernunnos from '../assets/leaders/Cernunnos/Start.mp3'
+// import startMizuchi from '../assets/leaders/Mizuchi/Start.mp3'
+// import startForte from '../assets/leaders/Forte/Start.mp3'
+// import startPompom from '../assets/leaders/Pompom/Start.mp3'
 import '../css/Home.css'
 
 export default function Home({ name }) {
   let wallpaper
+
   switch (name) {
     case 'Cernunnos':
         wallpaper = require('../assets/leaders/Cernunnos/Wallpaper.png')
@@ -15,14 +20,14 @@ export default function Home({ name }) {
         wallpaper = require('../assets/leaders/Mizuchi/Wallpaper.png')
         break;
     case 'Forte':
-      wallpaper = require('../assets/leaders/Forte/Wallpaper.png')
+        wallpaper = require('../assets/leaders/Forte/Wallpaper.png')
         break;
     case 'Pompom':
-      wallpaper = require('../assets/leaders/Pompom/Wallpaper.jpg')
+        wallpaper = require('../assets/leaders/Pompom/Wallpaper.jpg')
         break;
     default:
       wallpaper = require('../assets/leaders/Cernunnos/Wallpaper.png')
-}
+  }
 
   return (
     <div style={{background: 'url(' + wallpaper + ') no-repeat center center fixed',
@@ -31,7 +36,7 @@ export default function Home({ name }) {
             <Leader name={name} />
             <Voicelines name={name} />
             <Scoreboard name={name} />
-            <PlayPoints />
+            <PlayPoints name={name} />
         </header>
     </div>
   )
