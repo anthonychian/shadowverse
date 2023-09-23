@@ -25,6 +25,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  width: '90%',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
@@ -45,7 +46,7 @@ export default function Selection() {
         <IconButton onClick={handleOpen} sx={{ color:"white", position: 'fixed', left: '5%', zIndex: '10', backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
           <MenuIcon sx={{color: "white", width:"50px", height: "50px"}}></MenuIcon>
         </IconButton>
-      
+        {/* 'rgb(0, 0, 0, 0)' */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -53,7 +54,7 @@ export default function Selection() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-            <Card variant="outlined" sx={{backgroundColor: 'rgb(0, 0, 0, 0)'}}>
+            <Card sx={{backgroundColor: 'rgb(0, 0, 0, 0)'}} variant="outlined">
               <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
                   onClick={(e) => selectLeader(e)}>                  
                     <img width="100px" src={imageForte} alt="Forte"/>
