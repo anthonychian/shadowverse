@@ -35,6 +35,41 @@ import impressedPompom from '../assets/leaders/Pompom/Impressed.mp3'
 import tauntPompom from '../assets/leaders/Pompom/Taunt.mp3'
 import startPompom from '../assets/leaders/Pompom/Start.mp3'
 
+import greetingDaria from '../assets/leaders/Daria/Greeting.mp3'
+import thanksDaria from '../assets/leaders/Daria/Thanks.mp3'
+import apologyDaria from '../assets/leaders/Daria/Apology.mp3'
+import impressedDaria from '../assets/leaders/Daria/Impressed.mp3'
+import tauntDaria from '../assets/leaders/Daria/Taunt.mp3'
+import startDaria from '../assets/leaders/Daria/Start.mp3'
+
+import greetingAlbert from '../assets/leaders/Albert/Greeting.mp3'
+import thanksAlbert from '../assets/leaders/Albert/Thanks.mp3'
+import apologyAlbert from '../assets/leaders/Albert/Apology.mp3'
+import impressedAlbert from '../assets/leaders/Albert/Impressed.mp3'
+import tauntAlbert from '../assets/leaders/Albert/Taunt.mp3'
+import startAlbert from '../assets/leaders/Albert/Start.mp3'
+
+import greetingAria from '../assets/leaders/Aria/Greeting.mp3'
+import thanksAria from '../assets/leaders/Aria/Thanks.mp3'
+import apologyAria from '../assets/leaders/Aria/Apology.mp3'
+import impressedAria from '../assets/leaders/Aria/Impressed.mp3'
+import tauntAria from '../assets/leaders/Aria/Taunt.mp3'
+import startAria from '../assets/leaders/Aria/Start.mp3'
+
+import greetingExella from '../assets/leaders/Exella/Greeting.mp3'
+import thanksExella from '../assets/leaders/Exella/Thanks.mp3'
+import apologyExella from '../assets/leaders/Exella/Apology.mp3'
+import impressedExella from '../assets/leaders/Exella/Impressed.mp3'
+import tauntExella from '../assets/leaders/Exella/Taunt.mp3'
+import startExella from '../assets/leaders/Exella/Start.mp3'
+
+import greetingRola from '../assets/leaders/Rola/Greeting.mp3'
+import thanksRola from '../assets/leaders/Rola/Thanks.mp3'
+import apologyRola from '../assets/leaders/Rola/Apology.mp3'
+import impressedRola from '../assets/leaders/Rola/Impressed.mp3'
+import tauntRola from '../assets/leaders/Rola/Taunt.mp3'
+import startRola from '../assets/leaders/Rola/Start.mp3'
+
 export default function Voicelines({ name }) {
   let greeting, thanks, apology, impressed, taunt, start
   const buttonBackgroundColor = 'rgba(0, 0, 0, 0.6)'
@@ -64,14 +99,55 @@ export default function Voicelines({ name }) {
         taunt = new Audio(tauntForte)
         start = new Audio(startForte)
         break;
-        case 'Pompom':
-          greeting = new Audio(greetingPompom)
-          thanks = new Audio(thanksPompom)
-          apology = new Audio(apologyPompom)
-          impressed = new Audio(impressedPompom)
-          taunt = new Audio(tauntPompom)
-          start = new Audio(startPompom)
+      case 'Pompom':
+        greeting = new Audio(greetingPompom)
+        thanks = new Audio(thanksPompom)
+        apology = new Audio(apologyPompom)
+        impressed = new Audio(impressedPompom)
+        taunt = new Audio(tauntPompom)
+        start = new Audio(startPompom)
+        break;
+
+        case 'Daria':
+          greeting = new Audio(greetingDaria)
+          thanks = new Audio(thanksDaria)
+          apology = new Audio(apologyDaria)
+          impressed = new Audio(impressedDaria)
+          taunt = new Audio(tauntDaria)
+          start = new Audio(startDaria)
           break;
+          case 'Albert':
+        greeting = new Audio(greetingAlbert)
+        thanks = new Audio(thanksAlbert)
+        apology = new Audio(apologyAlbert)
+        impressed = new Audio(impressedAlbert)
+        taunt = new Audio(tauntAlbert)
+        start = new Audio(startAlbert)
+        break;
+        case 'Aria':
+        greeting = new Audio(greetingAria)
+        thanks = new Audio(thanksAria)
+        apology = new Audio(apologyAria)
+        impressed = new Audio(impressedAria)
+        taunt = new Audio(tauntAria)
+        start = new Audio(startAria)
+        break;
+        case 'Exella':
+        greeting = new Audio(greetingExella)
+        thanks = new Audio(thanksExella)
+        apology = new Audio(apologyExella)
+        impressed = new Audio(impressedExella)
+        taunt = new Audio(tauntExella)
+        start = new Audio(startExella)
+        break;
+        case 'Rola':
+        greeting = new Audio(greetingRola)
+        thanks = new Audio(thanksRola)
+        apology = new Audio(apologyRola)
+        impressed = new Audio(impressedRola)
+        taunt = new Audio(tauntRola)
+        start = new Audio(startRola)
+        break;
     default:
       greeting = new Audio(greetingCernunnos)
       thanks = new Audio(thanksCernunnos)

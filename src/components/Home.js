@@ -3,10 +3,6 @@ import Leader from './Leader'
 import Scoreboard from './Scoreboard'
 import Voicelines from './Voicelines'
 import PlayPoints from './PlayPoints'
-// import startCernunnos from '../assets/leaders/Cernunnos/Start.mp3'
-// import startMizuchi from '../assets/leaders/Mizuchi/Start.mp3'
-// import startForte from '../assets/leaders/Forte/Start.mp3'
-// import startPompom from '../assets/leaders/Pompom/Start.mp3'
 import '../css/Home.css'
 
 export default function Home({ name }) {
@@ -24,6 +20,21 @@ export default function Home({ name }) {
         break;
     case 'Pompom':
         wallpaper = require('../assets/leaders/Pompom/Wallpaper.jpg')
+        break;
+    case 'Daria':
+        wallpaper = require('../assets/leaders/Mizuchi/Wallpaper.png')
+        break;
+    case 'Albert':
+        wallpaper = require('../assets/leaders/Forte/Wallpaper.png')
+        break;
+    case 'Aria':
+        wallpaper = require('../assets/leaders/Mizuchi/Wallpaper.png')
+        break;
+    case 'Exella':
+        wallpaper = require('../assets/leaders/Cernunnos/Wallpaper.png')
+        break;
+    case 'Rola':
+        wallpaper = require('../assets/leaders/Forte/Wallpaper.png')
         break;
     default:
       wallpaper = require('../assets/leaders/Cernunnos/Wallpaper.png')

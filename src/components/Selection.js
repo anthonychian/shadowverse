@@ -4,6 +4,11 @@ import imageCernunnos from '../assets/leaders/Cernunnos/Cernunnos.png'
 import imageMizuchi from '../assets/leaders/Mizuchi/Mizuchi.png'
 import imageForte from '../assets/leaders/Forte/Forte.png'
 import imagePompom from '../assets/leaders/Pompom/Pompom.png'
+import imageDaria from '../assets/leaders/Daria/Daria.png'
+import imageAlbert from '../assets/leaders/Albert/Albert.png'
+import imageAria from '../assets/leaders/Aria/Aria.png'
+import imageExella from '../assets/leaders/Exella/Exella.png'
+import imageRola from '../assets/leaders/Rola/Rola.png'
 
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -50,7 +55,6 @@ export default function Selection() {
         <Box sx={style}>
             <Card variant="outlined" sx={{backgroundColor: 'rgb(0, 0, 0, 0)'}}>
               <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
-                  // hoverColor={Colors.green}
                   onClick={(e) => selectLeader(e)}>                  
                     <img width="100px" src={imageForte} alt="Forte"/>
               </IconButton>
@@ -65,6 +69,26 @@ export default function Selection() {
               <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
                   onClick={(e) => selectLeader(e)}>                  
                     <img width="100px" src={imagePompom} alt="Pompom"/>
+              </IconButton>
+              <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  onClick={(e) => selectLeader(e)}>                  
+                    <img width="100px" src={imageDaria} alt="Daria"/>
+              </IconButton>
+              <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  onClick={(e) => selectLeader(e)}>                  
+                    <img width="100px" src={imageAlbert} alt="Albert"/>
+              </IconButton>
+              <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  onClick={(e) => selectLeader(e)}>                  
+                    <img width="100px" src={imageAria} alt="Aria"/>
+              </IconButton>
+              <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  onClick={(e) => selectLeader(e)}>                  
+                    <img width="100px" src={imageExella} alt="Exella"/>
+              </IconButton>
+              <IconButton sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  onClick={(e) => selectLeader(e)}>                  
+                    <img width="100px" src={imageRola} alt="Rola"/>
               </IconButton>
             </Card>
         </Box>

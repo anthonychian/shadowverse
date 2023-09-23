@@ -6,18 +6,29 @@ import '../css/Scoreboard.css'
 
 import scoreAudio from '../assets/buttons/counter.mp3'
 import limitAudio from '../assets/buttons/limit.wav'
-
 import victoryCernunnos from '../assets/leaders/Cernunnos/Victory.mp3'
 import concedeCernunnos from '../assets/leaders/Cernunnos/Concede.mp3'
-
 import victoryMizuchi from '../assets/leaders/Mizuchi/Victory.mp3'
 import concedeMizuchi from '../assets/leaders/Mizuchi/Concede.mp3'
-
 import victoryForte from '../assets/leaders/Forte/Victory.mp3'
 import concedeForte from '../assets/leaders/Forte/Concede.mp3'
-
 import victoryPompom from '../assets/leaders/Pompom/Victory.mp3'
 import concedePompom from '../assets/leaders/Pompom/Concede.mp3'
+
+import victoryDaria from '../assets/leaders/Daria/Victory.mp3'
+import concedeDaria from '../assets/leaders/Daria/Concede.mp3'
+
+import victoryAlbert from '../assets/leaders/Albert/Victory.mp3'
+import concedeAlbert from '../assets/leaders/Albert/Concede.mp3'
+
+import victoryAria from '../assets/leaders/Aria/Victory.mp3'
+import concedeAria from '../assets/leaders/Aria/Concede.mp3'
+
+import victoryExella from '../assets/leaders/Exella/Victory.mp3'
+import concedeExella from '../assets/leaders/Exella/Concede.mp3'
+
+import victoryRola from '../assets/leaders/Rola/Victory.mp3'
+import concedeRola from '../assets/leaders/Rola/Concede.mp3'
 
 export default function Scoreboard({ name }) {
     let scoreCounter = new Audio(scoreAudio)
@@ -43,6 +54,26 @@ export default function Scoreboard({ name }) {
         case 'Pompom':
             victory = new Audio(victoryPompom)
             concede = new Audio(concedePompom)
+            break;
+        case 'Daria':
+            victory = new Audio(victoryDaria)
+            concede = new Audio(concedeDaria)
+            break;
+        case 'Albert':
+            victory = new Audio(victoryAlbert)
+            concede = new Audio(concedeAlbert)
+            break;
+        case 'Aria':
+            victory = new Audio(victoryAria)
+            concede = new Audio(concedeAria)
+            break;
+        case 'Exella':
+            victory = new Audio(victoryExella)
+            concede = new Audio(concedeExella)
+            break;
+        case 'Rola':
+            victory = new Audio(victoryRola)
+            concede = new Audio(concedeRola)
             break;
         default:
         victory = new Audio(victoryCernunnos)

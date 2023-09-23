@@ -12,7 +12,11 @@ import NextTurnCernunnos from '../assets/leaders/Cernunnos/NextTurn.mp3'
 import NextTurnMizuchi from '../assets/leaders/Mizuchi/NextTurn.mp3'
 import NextTurnForte from '../assets/leaders/Forte/NextTurn.mp3'
 import NextTurnPompom from '../assets/leaders/Pompom/NextTurn.mp3'
-
+import NextTurnDaria from '../assets/leaders/Daria/NextTurn.mp3'
+import NextTurnAlbert from '../assets/leaders/Albert/NextTurn.mp3'
+import NextTurnAria from '../assets/leaders/Aria/NextTurn.mp3'
+import NextTurnExella from '../assets/leaders/Exella/NextTurn.mp3'
+import NextTurnRola from '../assets/leaders/Rola/NextTurn.mp3'
 
 export default function Scoreboard({ name }) {
     let counter = new Audio(playpointsAudio)
@@ -59,6 +63,21 @@ export default function Scoreboard({ name }) {
           break;
       case 'Pompom':
           NextTurn = new Audio(NextTurnPompom)
+          break;
+      case 'Daria':
+          NextTurn = new Audio(NextTurnDaria)
+          break;
+      case 'Albert':
+          NextTurn = new Audio(NextTurnAlbert)
+          break;
+      case 'Aria':
+          NextTurn = new Audio(NextTurnAria)
+          break;
+      case 'Exella':
+          NextTurn = new Audio(NextTurnExella)
+          break;
+      case 'Rola':
+          NextTurn = new Audio(NextTurnRola)
           break;
       default:
           NextTurn = new Audio(NextTurnCernunnos)
